@@ -3,6 +3,7 @@ import "./index.scss";
 import { Link } from "react-router-dom";
 import Modal from "../../Modal/Modal";
 
+
 const Header = () => {
   const [openModal, setOpenModal] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
