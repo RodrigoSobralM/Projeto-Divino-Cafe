@@ -1,5 +1,8 @@
 import React from 'react'
 import './index.scss'
+import closeModal from '../../img/wrong 1.png'
+import equipe from  '../../img/equipe.png'
+import logo from '../../img/logoVazada.svg'
 
 export default function Modal({ isOpen, setModalOpen, children }) {
     if (isOpen) {
@@ -7,14 +10,14 @@ export default function Modal({ isOpen, setModalOpen, children }) {
         <div className='modalBG'>
           <div className='modalBG__modal'>
             <div className='modalBG__modal-fechar' onClick={setModalOpen}>
-            <img src="../../src/img/wrong 1.png" alt="" />
+            <img src={closeModal} alt="" />
             </div>
-            <img className='modalBG__modal-logo' src="../../src/img/logoVazada.svg"/>
+            <img className='modalBG__modal-logo' src={logo}/>
             <div className='modalBG__modal-text'>
                 Somos uma empresa familiar com fornecimento de produtos artesanais para realização de pequenos eventos in-company e particulares.<br></br>
                 Especialistas em realização de coffe breaks para congressos, treinamentos, convenções, workshops, entre outros.
             </div>
-                <img className='modalBG__modal-equipe' src="../../src/img/equipe.png" alt="" />
+                <img className='modalBG__modal-equipe' src={equipe} alt="" />
             </div>
             
         </div>
