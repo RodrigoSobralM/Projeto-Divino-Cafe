@@ -1,11 +1,11 @@
 import React from 'react'
 import './index.scss'
 
-const ImgGaleria = ({data}) => {
+const ImgGaleria = ({imgPath}) => {
   
   return (
     <div className='imgGaleria'>
-        <img src={data.imgPath} alt="" />
+        <img src={imgPath} alt="" />
     </div>
   )
 }
