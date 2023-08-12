@@ -5,6 +5,7 @@ import './index.scss';
 import { key } from 'localforage';
 import ImgGaleria from '../../src/components/imgsGaleria/ImgGaleria';
 
+
 const Galeria = ({data}) => {
   console.log(data)
   const [hovered, setHovered] = useState(false);
