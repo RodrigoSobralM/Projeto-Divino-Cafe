@@ -117,7 +117,7 @@ const Cardapio = ({ data }) => {
           </div>
           )}
           {isMobileMenuOpen && window.innerWidth < 800 && (
-            <ul className='mobile-menu'>
+            <ul>
               {Object.keys(filters).map((key, index) => (
                 <li key={index} onClick={() => handleLiClick(index)}>
                   {key}

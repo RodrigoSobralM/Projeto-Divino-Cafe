@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./index.scss";
 import { Link } from "react-router-dom";
 import Modal from "../../Modal/Modal";
-
+import BannerHeader from '../../../img/bannerHeaderCardapio.svg'
+import logo from '../../../img/logoVazada.svg'
+import carrinho from '../../../img/carrinho.svg'
 
 const Header = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -12,20 +14,22 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const divStyle = {
+    backgroundImage: `url(${BannerHeader})`,
+    backgroundSize: `cover`,
+    backgroundPosition: `center`,
+  };
+
   return (
-    <div>
+    <div style={divStyle}>
       <Modal isOpen={openModal} setModalOpen={() => setOpenModal(!openModal)} />
       <div className="headerComp">
         <div className="headerComp__component">
           <Link to={"/"}>
-            <img src="../../src/img/logoVazada.svg" alt="" />
+            <img src={logo} alt="" />
           </Link>
           <div className="headerComp__teste">
-          <div
-            className={`headerComp__lis ${
-              isMobileMenuOpen ? "mobile-menu-open" : ""
-            }`}
-          >
+          <div className={`headerComp__lis ${isMobileMenuOpen ? "mobile-menu-open" : ""}`}>
             <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
               <div className="bar"></div>
               <div className="bar"></div>
@@ -54,7 +58,7 @@ const Header = () => {
             </h1>
           </div>
             <Link to={"/finalizar"}>
-              <img src="../../src/img/carrinho.svg" alt="" />
+              <img src={carrinho} alt="" />
             </Link>
           </div>
         </div>
