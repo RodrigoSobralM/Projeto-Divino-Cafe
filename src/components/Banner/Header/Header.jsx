@@ -8,7 +8,7 @@ import carrinho from '../../../img/carrinho.svg'
 
 const Header = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
