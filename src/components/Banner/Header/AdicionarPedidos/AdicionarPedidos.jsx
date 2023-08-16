@@ -2,21 +2,18 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 export const useAdicionarPedidos = () => {
   const [itensAdicionados, setItensAdicionados] = useState([]);
-
   // Função para adicionar um item
-  const adicionarItem = (nomeItem, precoItem) => {
+  const adicionarItem = (nomeItem) => {
     // Verifica se o item já foi adicionado
     const itemExistente = itensAdicionados.find((item) => item.nome === nomeItem);
-    const precoExistente = itensAdicionados.find((item) => item.peco === precoItem)
-    
-    if (itemExistente && precoExistente) {
-      // Se o item já existe, atualiza a quantidade e o preço total
+
+    if (itemExistente) {
+      // Se o item já existe, atualiza a quantidade
       const novosItens = itensAdicionados.map((item) => {
-        if (item.nome === nomeItem && item.preco === precoItem) {
+        if (item.nome === nomeItem) {
           return {
             ...item,
             quantidade: item.quantidade + 100,
-            preco: item.preco + precoItem,
           };
         }
         return item;
@@ -30,21 +27,19 @@ export const useAdicionarPedidos = () => {
         {
           nome: nomeItem,
           quantidade: 100,
-          preco: parseFloat(precoItem),
         },
       ]);
     }
   };
-  
+
 
   // Função para remover um item
-  const removerItem = (nomeItem, precoItem) => {
+  const removerItem = (nomeItem) => {
     const novosItens = itensAdicionados.map((item) => {
-      if (item.nome === nomeItem && item.preco === precoItem) {
+      if (item.nome === nomeItem) {
         return {
           ...item,
           quantidade: item.quantidade - 100, // Altere o sinal de + para -
-
         };
       }
       return item;
