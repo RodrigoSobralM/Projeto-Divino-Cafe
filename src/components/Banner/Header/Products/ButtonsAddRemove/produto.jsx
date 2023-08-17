@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
-import React from 'react';
-import './index.scss';
+import { useState, useEffect } from "react";
+import React from "react";
+import "./index.scss";
 
 const ButtonsAddRemove = ({ data, onAdicionar, onRemover }) => {
-  const initialValue = parseInt(localStorage.getItem(`counter_${data.nome}`)) || 0;
+  const initialValue =
+    parseInt(localStorage.getItem(`counter_${data.nome}`)) || 0;
   const [counter, setCounter] = useState(initialValue);
 
   useEffect(() => {
@@ -18,21 +19,27 @@ const ButtonsAddRemove = ({ data, onAdicionar, onRemover }) => {
   };
 
   return (
-    <div className='name'>
+    <div className="name">
       <h2>{data.nome}</h2>
-      <div className='name__btn'>
-      {data.precoFatia20a25 && data.precoFatia25a30 ? (
-          <div>
-            <h2>Preço Fatia 20 a 25 ({data.precofatia20a25})</h2>
-            <h2>Preço Fatia 25 a 30 ({data.precoFatia25a30})</h2>
+      <div className="name__btn">
+        {data.precoFatia20a25 && data.precoFatia25a30 ? (
+          <div className="name_preco">
+            <div>
+              <h2>Preço Fatia 20 a 25</h2>
+              <h2>({data.precofatia20a25})</h2>
+            </div>
+            <div>
+              <h2>Preço Fatia 25 a 30 </h2>
+              <h2>({data.precoFatia25a30})</h2>
+            </div>
           </div>
         ) : data.precoFesta && data.precoMedio ? (
-          <div className='name_preco'>
+          <div className="name_preco">
             <h2>Preço p/Festas (R$ {data.precoFesta})</h2>
             <h2>Preços Médio (R$ {data.precoMedio})</h2>
           </div>
         ) : (
-          <h2 className='name__preco'>R$ {data.preco}</h2>
+          <h2 className="name_precoSolo">R$ {data.preco}</h2>
         )}
         <button onClick={decrementar}>-</button>
         <span>{counter}</span>
@@ -41,7 +48,9 @@ const ButtonsAddRemove = ({ data, onAdicionar, onRemover }) => {
             onAdicionar(data.nome);
             setCounter((prevCounter) => prevCounter + 1);
           }}
-        >+</button>
+        >
+          +
+        </button>
       </div>
     </div>
   );
