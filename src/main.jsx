@@ -5,7 +5,7 @@ import './index.scss';
 import Home from '../views/Home/Home.jsx';
 import Cardapio from '../views/Cardapio/Cardapio';
 import Galeria from '../views/Galeria/Galeria';
-import Finalizar from '../views/Finalizar';
+import Finalizar from '../views/Finalizar/Finalizar';
 import ConfirmarPedido from '../views/Confirmar/ConfirmacaoPedido';
 import { BEBIDAS_MOCK } from './mock/BebidasMock';
 import Site from '../views/Site/Site.jsx';

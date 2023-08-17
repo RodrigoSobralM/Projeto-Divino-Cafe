@@ -142,7 +142,7 @@ const Cardapio = ({ data }) => {
                   style={{ display: index === activeIndex ? 'grid' : 'none' }}
                 >
                   <h1>{categoryName}</h1>
-                  <div className='Cardapio__content'></div>
+                  <div className='Cardapio__content'> </div>
                   <div>
                     {filteredItems.map((product) => (
                       <ButtonsAddRemove
