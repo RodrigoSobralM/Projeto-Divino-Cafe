@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './style.css'
+import './index.scss'
 import Header from '../../src/components/Banner/Header/Header';
 import { Link, Navigate } from 'react-router-dom';
 

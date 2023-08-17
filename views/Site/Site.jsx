@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../../src/components/Banner/Header/Header'
 import { Link } from "react-router-dom";
 import './index.scss';
+import iconeLinkedin from '../../src/assets/pngwing 2.png'
+import iconeInstagram from '../../src/assets/pngwing 1.png'
 
 const Site = () => {
   return (
@@ -32,8 +34,8 @@ const Site = () => {
                 ACOMPANHE A DIVINO
             </h1>
             <div className='nLinks__links'>
-                <a href="http://linkedin.com/company/divinocafeecia/" ><img src="../../src/assets/pngwing 2.png"></img>   divinocafeecia</a>
-                <a href="http://instagram.com/divinocafeecia/" ><img src="../../src/assets/pngwing 1.png"></img>   divinocafeecia</a>
+                <a href="http://linkedin.com/company/divinocafeecia/" ><img src={ iconeLinkedin }></img>   divinocafeecia</a>
+                <a href="http://instagram.com/divinocafeecia/" ><img src={ iconeInstagram }></img>   divinocafeecia</a>
             </div>
         </div>
         <div className='nOrcamento'>

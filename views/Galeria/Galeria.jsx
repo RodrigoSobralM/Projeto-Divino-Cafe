@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import Header from '../../src/components/Banner/Header/Header'
-import { Link } from "react-router-dom";
 import './index.scss';
-import { key } from 'localforage';
 import ImgGaleria from '../../src/components/imgsGaleria/ImgGaleria';
-
 
 const Galeria = ({data}) => {
   const [hovered, setHovered] = useState(false);
